@@ -1,5 +1,24 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="about text-center">
+    <Nav />
+
+    <Section :header="true" headerText="About" />
+    <div class="container"></div>
   </div>
 </template>
+
+<script>
+import Nav from "@/components/Nav.vue";
+import Section from "@/components/Section.vue";
+
+export default {
+  name: "about",
+  components: { Nav, Section },
+};
+</script>
+
+<style>
+.about .container {
+  margin-top: 90px;
+}
+</style>
